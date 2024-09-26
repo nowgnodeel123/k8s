@@ -26,15 +26,15 @@ spec:
       containers:
         - name: factorial
           image: diversim90/factorial-app-for-k8s:0.0.7
-      ######## 04.lifecycle hook 추가 - start ########
+          ######## 04.lifecycle hook 추가 - start ########
           lifecycle:
             preStop: # 컨테이너가 종료( 계획적인 의도에 따른 종료, 예. rollingupdate 등 )
-                     # 될 때 실행되는 hook
+              # 될 때 실행되는 hook
               exec:
                 # 10 초 정도 sleep 한 후에 애플리케이션에 종료 신호를 보내도록 함.
-                command: ["/bin/sh", "-c", "sleep 10"]
-      ######## 04.lifecycle hook 추가 - end ########
-      ######## 05.probe 추가 - start ########
+                command: [ "/bin/sh", "-c", "sleep 10" ]
+          ######## 04.lifecycle hook 추가 - end ########
+          ######## 05.probe 추가 - start ########
           startupProbe:
             httpGet:
               path: /probe/startup

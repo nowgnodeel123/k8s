@@ -33,8 +33,8 @@ jib {
         image = "openjdk:17"
     }
     to {
-        image = "diversim90/factorial-cache-app-for-k8s"
-        tags = ['latest', '0.0.4']
+        image = "nowgnodeel/factorial-cache"
+        tags = ['latest', '0.0.1']
     }
     container {
         creationTime = "USE_CURRENT_TIMESTAMP"

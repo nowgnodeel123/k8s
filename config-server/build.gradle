@@ -45,7 +45,7 @@ jib {
         image = "openjdk:17"
     }
     to {
-        image = "wnsgud0310/msa-config"
+        image = "nowgnodeel/config"
         tags = ['latest', '0.0.1']
     }
     container {
